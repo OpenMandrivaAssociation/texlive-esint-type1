@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /fonts/ps-type1/esint
+# catalog-date 2008-01-16 21:31:11 +0100
+# catalog-license pd
+# catalog-version undef
 Name:		texlive-esint-type1
 Version:	20080116
 Release:	1
@@ -48,6 +54,7 @@ following the instructions in the normal way.
 %doc %{_texmfdistdir}/doc/fonts/esint-type1/README.plainTeX
 %doc %{_texmfdistdir}/doc/fonts/esint-type1/table.pdf
 %doc %{_texmfdistdir}/doc/fonts/esint-type1/table.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -58,3 +65,5 @@ following the instructions in the normal way.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar dvips fonts tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
