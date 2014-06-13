@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-esint-type1
 Version:	20080116
-Release:	6
+Release:	7
 Summary:	Font esint10 in Type 1 format
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/ps-type1/esint
