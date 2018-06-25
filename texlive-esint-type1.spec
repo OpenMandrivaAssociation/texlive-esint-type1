@@ -5,7 +5,7 @@
 # catalog-license pd
 # catalog-version undef
 Name:		texlive-esint-type1
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	Font esint10 in Type 1 format
 Group:		Publishing
