@@ -5,8 +5,8 @@
 # catalog-license pd
 # catalog-version undef
 Name:		texlive-esint-type1
-Version:	20180303
-Release:	2
+Version:	20190228
+Release:	1
 Summary:	Font esint10 in Type 1 format
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/ps-type1/esint
