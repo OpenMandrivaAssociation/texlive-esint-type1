@@ -1,18 +1,12 @@
-# revision 15878
-# category Package
-# catalog-ctan /fonts/ps-type1/esint
-# catalog-date 2008-01-16 21:31:11 +0100
-# catalog-license pd
-# catalog-version undef
 Name:		texlive-esint-type1
-Version:	20190228
+Version:	15878
 Release:	1
 Summary:	Font esint10 in Type 1 format
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/ps-type1/esint
 License:	PD
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/esint-type1.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/esint-type1.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/esint-type1.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/esint-type1.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,12 +22,12 @@ files can be generated from the Metafont sources obtained by
 following the instructions in the normal way.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -48,24 +42,10 @@ following the instructions in the normal way.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar dvips fonts tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20080116-2
-+ Revision: 751576
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20080116-1
-+ Revision: 718365
-- texlive-esint-type1
-- texlive-esint-type1
-- texlive-esint-type1
-- texlive-esint-type1
-
