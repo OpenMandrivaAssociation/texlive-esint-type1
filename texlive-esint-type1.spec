@@ -1,6 +1,6 @@
 Name:		texlive-esint-type1
 Version:	15878
-Release:	1
+Release:	2
 Summary:	Font esint10 in Type 1 format
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/ps-type1/esint
