@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Font esint10 in Type 1 format
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/ps-type1/esint
+URL:		https://www.ctan.org/tex-archive/fonts/ps-type1/esint
 License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/esint-type1.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/esint-type1.doc.r%{version}.tar.xz
