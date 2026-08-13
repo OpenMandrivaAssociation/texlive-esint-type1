@@ -13,7 +13,8 @@ Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/esint-type1.doc.
 BuildArch:	noarch
 BuildSystem:	texlive
 Requires:	texlive(esint)
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 This is Eddie Saudrais's font esint10 in Adobe Type 1 format. The Adobe
@@ -23,3 +24,10 @@ necessary to use the fonts with TeX; the TFM files can be generated from
 the Metafont sources obtained by following the instructions in the
 normal way.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from esint-type1:
+MixedMap esint.map
+TL_DROPIN_EOF
